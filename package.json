@@ -1,0 +1,16 @@
+{
+  "name": "bigspring-light",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "author": "gethugothemes",
+  "scripts": {
+    "dev": "tinacms dev -c \"cd exampleSite; hugo server || hugo server --themesDir ../..\"",
+    "build": "tinacms build && cd exampleSite; hugo --gc --minify --templateMetrics --templateMetricsHints --verbose --verboseLog --buildDrafts --buildExpired --buildFuture --forceSyncStatic || hugo --themesDir ../.. --gc --minify --templateMetrics --templateMetricsHints --verbose --verboseLog --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
+    "audit": "tinacms audit",
+    "update": "hugo mod clean && hugo mod get -u ./... && hugo mod tidy"
+  },
+  "dependencies": {
+    "@tinacms/cli": "^1.5.16",
+    "tinacms": "^1.5.8"
+  }
+}
